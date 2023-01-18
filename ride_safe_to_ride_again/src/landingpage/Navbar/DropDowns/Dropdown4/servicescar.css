@@ -1,0 +1,36 @@
+.service-menu {
+    
+    width: 250px;
+    position: absolute;
+    top: 50px;
+    list-style: none;
+    text-align: start;
+  }
+  
+  .service-menu li {
+    background: #35649b;
+    cursor: pointer;
+  }
+  
+  .service-menu li:hover {
+    background: #364a62;
+  }
+  
+  .service-menu.clicked {
+    display: none;
+  }
+  
+  .service-link {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    padding: 16px;
+  }
+  
+  @media screen and (max-width: 960px) {
+    .fa-caret-down {
+      display: none;
+    }
+  }
