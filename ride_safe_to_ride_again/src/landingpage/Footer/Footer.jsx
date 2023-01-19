@@ -77,13 +77,15 @@ color="#FFF"
         <Flex m="20px" direction={{base:"column",md:"row"}}>
             <Box>
             <Flex m="20px" direction={{base:"column",md:"row"}}>
-        <Select placeholder='Select option' marginRight={"20px"} w={[60,60]}>
-  <option value='option1'>Option 1</option>
-  <option value='option2'>Option 2</option>
-  <option value='option3'>Option 3</option>
+        <Select placeholder='Select option' color={"black"} bg={"white"} size="md" w={[60,60]}>
+  <option value='option1'>United State</option>
+  <option value='option2'>Canada</option>
+  <option value='option3'>Turkey</option>
+  <option value='option2'>Australia</option>
+  <option value='option3'>Czech Republic</option>
 </Select>
 
-<Select placeholder='English' size="md" w={[60,60]}>
+<Select placeholder='English' color={"black"} bg={"white"} size="md" w={[60,60]}>
   <option value='English'>English</option>
   <option value='Espaniol'>Espaniol</option>
   <option value='Portugues'>Portugues</option>
@@ -140,8 +142,6 @@ style={{
 <button
 style={{
     backgroundColor:"black",
-    
-    padding:"10px",
     borderRadius:"20px"
 }}
 >Website Feedback</button>
@@ -151,7 +151,7 @@ style={{
     marginLeft:"10%",
     padding:"10px",
     borderRadius:"20px",
-    marginBottom:"20px"
+    
 }}
 >Rental Feedback</button>
 <hr />
@@ -163,10 +163,6 @@ style={{
 <button className='Reddish'    onClick={(e)=>setActive(!isActive)}>FeedBack</button>
 </Box>
 </Box>
-
-
-
-
-    </>
+ </>
 }
 export default Footer
