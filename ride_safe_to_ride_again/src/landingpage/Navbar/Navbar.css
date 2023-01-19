@@ -153,3 +153,59 @@
   .allLink{
     margin-left: 200px;
   }
+
+
+  .Loginup{
+    border:1px solid green;
+    width: 30%;
+    padding: 30px;
+    margin:auto;
+    position: absolute;
+    top:-2500%;
+    
+    margin-top:50px;
+    text-align:center;
+    color: rgb(255, 255, 255);
+    background:linear-gradient(0deg,rgb(21, 20, 20),rgb(57, 56, 56));
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+ z-index: 10;
+  }
+
+
+  .Activelogin{
+    border:1px solid green;
+    width: 35%;
+    height: 550px;
+    padding: 30px;
+    margin:auto;
+    position: absolute;
+    top:50px;
+    left:500px;
+    font-weight: 600;
+    transition: 3ms;
+    margin-top:50px;
+    text-align:center;
+    color: rgb(16, 9, 9);
+    background:linear-gradient(0deg,rgb(149, 147, 30),rgb(54, 136, 171));
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+ z-index: 10;
+  } 
+
+
+  .mcQueen{
+    width:120px;
+    border-radius: 20px;
+    margin-left: 35%;
+    margin-top:10px;
+    opacity: 0.9;
+  }
+
+  @media screen and (max-width: 750px) {
+    .Activelogin {
+      width:80%;
+      top:30px;
+      left:40px
+    }
+  }

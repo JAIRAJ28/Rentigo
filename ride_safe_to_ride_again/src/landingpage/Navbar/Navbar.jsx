@@ -8,7 +8,7 @@ import Offerdown from "./DropDowns/Dropdown2/offermenudrop";
 import Location from "./DropDowns/Dropdown3/location";
 import Servicecar from "./DropDowns/Dropdown4/servicescar";
 import Buissdown from "./DropDowns/Dropdown5/business";
-
+import { Switch,FormLabel,Flex,Box,Text ,Input,Button,Image,SimpleGrid} from "@chakra-ui/react";
 
 
 
@@ -113,11 +113,17 @@ const wantofferDown=()=>{
  }
 
  
+const [pop,setpop]=React.useState(false);
+const Handelclick=()=>{
+   setpop(!pop);
+}
 
 
 
-
-
+let [yeno,setYesNo]=React.useState(false)
+const HandelClick=()=>{
+setYesNo(!yeno)
+}
 
 
 return(
@@ -201,12 +207,15 @@ return(
             Avis Preferred
             </Link>
             </li>
-
-            
+ 
+                 {/* Popuppppppppppppp */}
             <li>
-            <Link to='/login' className='nav-link' >
+            <Button onClick={Handelclick}>
             LogIn
-            </Link>
+              
+            </Button>
+            
+            
             </li>
             
 
@@ -219,6 +228,69 @@ return(
         </ul>
         </div>
 </nav>
+
+
+<div 
+className={`Loginup ${pop?"Activelogin":""}`}
+        style={{
+            fontFamily:"  gothic-italic"
+        }}
+        >
+        <h1
+        style={{
+            fontWeight:"800",
+            fontSize:"20px",
+            marginDown:"30px"
+        }}
+        >LOG INTO YOUR RENTIGO ACCOUNT.</h1>
+            <form 
+            bg={"linear-gradient(0deg,rgb(21, 20, 20),rgb(57, 56, 56))"}
+            >
+               
+                <div>
+                <Input mt={"20px"} mb={"30px"} type="text" variant='filled' placeholder="Username/Wizard Number" isRequired="true" />
+                   
+                    <br />
+
+                    <Input type="number" variant='filled' placeholder="Password (Case Sensitive)" isRequired="true" />
+                 
+                </div>
+               <Flex justifyContent={"space-between"} mt={"20px"} mb={"20px"}>
+                <FormLabel htmlFor='email-alerts' >
+                    Remember Me
+                    </FormLabel>
+                    <Box>
+                    <Switch id='email-alerts' onChange={HandelClick} />
+                    <span>{yeno?"Yes":"No"}</span>
+                    </Box>
+
+                    </Flex>
+
+                    <Box mt={"20px"} mb={"20px"}>
+                        <Text>This site is protected by reCAPTCHA Enterprise and the Google 
+                            <span><Link color={"blue"}> Privacy Policy </Link></span>
+                             and  <Link color={"blue"}> Terms of Service </Link>apply.</Text>
+                    </Box>
+                    <Button w="80%" color={"black"} mt={"10px"} mb={"30px"}>Log In</Button>
+              <hr />
+       <Flex justifyContent={"space-between"} mt={"20px"}>
+        <Link color={"green"}>Forgot UserName</Link>
+        <Link color={"green"}>Forgot password</Link>
+       </Flex>
+     <hr />
+      
+     </form>
+     <Link to="/">
+<img 
+onClick={()=>setpop(false)}
+className="mcQueen"
+src="https://i.ibb.co/L1sVxjf/th-5.jpg" alt="" />
+</Link>
+</div>
+
+
+
+
 </>
 )
 }

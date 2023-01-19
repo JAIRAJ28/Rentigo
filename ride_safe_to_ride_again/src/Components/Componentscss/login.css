@@ -1,0 +1,71 @@
+
+/* .Loginup{
+    border:1px solid green;
+    width: 33%;
+    padding: 30px;
+    margin:auto;
+    position: relative;
+    margin-top:30px;
+    text-align:center;
+    color: rgb(255, 255, 255);
+    background:linear-gradient(0deg,rgb(21, 20, 20),rgb(57, 56, 56));
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+} */
+
+
+
+/* .Loginup::before , .Loginup::after{
+    position: absolute;
+    left: -2px;
+    top:-2px;
+background: linear-gradient(45deg, #e6fb04
+#ff6600,#00ff66,#00ffff,#ff00ff,#ff0099,#6e0dd0,#ff3300,
+#099fff);    
+ 
+background-size: 400%;
+width: calc(100%+20px);
+height: calc(100%+20px);
+z-index: -1;
+animation:animate 20s linear infinite;
+}
+    
+@keyframes animate{
+    0%{
+        background-position:0 0;
+    }
+    50%{
+        background-postion:400% 0;
+    }
+    100%{
+        background-position:0 0;
+    }
+}
+.Loginup::after{
+    filter:blur(40px)
+    opac
+}
+
+
+.block{
+    position:relative;
+margin: 10% auto 0;
+width: 50%;
+height:400px;
+background:linear-gradient(0deg,rgb(21, 20, 20),rgb(57, 56, 56));
+}
+
+.glow::before , .glow::after{
+    position: absolute;
+    left: -2px;
+    top:-2px;
+background: linear-gradient(45deg, #e6fb04
+#ff6600,#00ff66,#00ffff,#ff00ff,#ff0099,#6e0dd0,#ff3300,
+#099fff);    
+ 
+background-size: 400%;
+width: calc(100%+20px);
+height: calc(100%+20px);
+z-index: -1;
+animation:animate 20s linear infinite;
+} */
