@@ -1,18 +1,19 @@
 import { Routes, Route} from 'react-router-dom';
 import Home from '../Components/Home';
-import { Login } from '../Components/login';
-import  Registration  from '../Components/signup';
+import Reservation  from '../Components/reservation';
+import  Signup  from '../Components/signup';
 import { Cardemos } from '../Components/cardemos';
-import { Cart } from '../Components/cart';
-import { Demo } from '../Components/demo';
+
+import { Demo } from '../Components/moredemo';
 const Routess=()=>{
     return(
         <div>
             <Routes>
                <Route path="/" element={<Home/>}/>
-               <Route path="/cardemos" element={<Cardemos/>}/>
-               {/* <Route path="/login" element={<Login/>}/> */}
-               <Route path="/signin" element={<Registration/>}/>
+               <Route path="/carsales" element={<Cardemos/>}/>
+               <Route path="/carsales/:userid" element={<Demo/>}/>
+               <Route path="/reservation" element={<Reservation/>}/>
+               <Route path="/signin" element={<Signup/>}/>
 
             </Routes>
         </div>

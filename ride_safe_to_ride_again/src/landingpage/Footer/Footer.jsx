@@ -17,7 +17,7 @@ color="#FFF"
 
 
 
-<SimpleGrid columns={{ base: 1, sm: 2, md: 6 }} spacing={8}  p="20px">
+<SimpleGrid columns={{ base: 1, sm: 2, md: 6 }} spacing={8} mt={"10px"}  p="20px">
           <VStack  >
             <h4 style={{fontWeight:"760"}} > TOP US DESTINATIONS</h4>
             <Link style={{padding:"2px"}} to='/'>Travel Guides</Link>
@@ -163,6 +163,7 @@ style={{
 <button className='Reddish'    onClick={(e)=>setActive(!isActive)}>FeedBack</button>
 </Box>
 </Box>
+
  </>
 }
 export default Footer
