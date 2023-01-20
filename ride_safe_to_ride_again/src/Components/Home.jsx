@@ -9,7 +9,7 @@ const Home=()=>{
    <div 
    className="firstdiv"
    >
-   <Box bg={"red"}>
+   <Box bg={"rgb(212, 0, 42)"}>
  <Image m={"auto"} w={"70%"} z-index={-1} h="400px" src="https://i.ibb.co/ZfKzVQ1/car-subscriptions-rise-in-india.jpg" alt='Car' />
  <div
  style={{
@@ -58,7 +58,7 @@ border={"2px solid green"}
    </div>
 {/* Functionality is to be added here check it will go to the admin page and redirect to the car pages wher ethere wil be variety */}
 <Box bg={"black"}>
-    <Text w={"25%"} m="auto" color={"white"}> SAVE up to 35% and get OUR BEST RATES! Book Now!</Text>
+    <Text w={"30%"} m="auto" color={"white"}> SAVE up to 35% and get OUR BEST RATES! Book Now!</Text>
 </Box>
 
 

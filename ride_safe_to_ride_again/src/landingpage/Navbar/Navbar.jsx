@@ -211,7 +211,10 @@ return(
                  {/* Popuppppppppppppp */}
             <li>
             <Button onClick={Handelclick}>
-            LogIn
+               
+                LogIn
+           
+            
               
             </Button>
             
@@ -271,7 +274,9 @@ className={`Loginup ${pop?"Activelogin":""}`}
                             <span><Link color={"blue"}> Privacy Policy </Link></span>
                              and  <Link color={"blue"}> Terms of Service </Link>apply.</Text>
                     </Box>
+                    <Link to="/reservation">
                     <Button w="80%" color={"black"} mt={"10px"} mb={"30px"}>Log In</Button>
+                   </Link>
               <hr />
        <Flex justifyContent={"space-between"} mt={"20px"}>
         <Link color={"green"}>Forgot UserName</Link>

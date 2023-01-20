@@ -1,0 +1,12 @@
+.midDiv{
+    background-image: url("");
+}
+.input1fist{
+    border:1px solid rgb(2, 1, 1);
+    width:80%;
+    margin:auto;
+    margin-top:10px
+}
+.bigInputdiv{
+  padding: 50px;
+}

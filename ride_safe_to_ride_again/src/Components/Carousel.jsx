@@ -5,14 +5,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
  
 const Slider = ({ start }) => { 
     return ( 
-        <Carousel fade
+        <Carousel fade width="10%"
         
         > 
  
             {start.map((item) => ( 
-                <Carousel.Item> 
+                <Carousel.Item width="100%"> 
                     <img 
-                        width="30%" 
+                        width="80%" 
+                        height={"20px"}
                         className="d-block w-100" 
                         src={item} 
                         alt="First slide" 
