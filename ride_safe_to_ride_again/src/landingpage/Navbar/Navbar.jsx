@@ -285,7 +285,7 @@ className={`Loginup ${pop?"Activelogin":""}`}
      <hr />
       
      </form>
-     <Link to="/">
+     <Link to="/admin">
 <img 
 onClick={()=>setpop(false)}
 className="mcQueen"

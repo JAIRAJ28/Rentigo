@@ -12,6 +12,7 @@ let initialState={
     isError:false,
 }
 const reducer=(state,action)=>{
+    
 switch (action.type){
     case "Sucess":{
        return{
@@ -106,13 +107,25 @@ if(state.isLoading){
                 fontSize={"20px"}
                 fontWeight={"bold"}
                 >{item.title}</Text>
-
+        
                 <Button
                 color={"yellow"}
                 background={"black"}
-                >
-                    Rent Me
+               onClick={(e)=>{
+                let obhj={
+                    id:item.id,
+                    title:item.title,
+                    image:item.image,
+                    price:item.price,
+                    description:item.description,
+
+                }
+                localStorage.setItem("onprocess",JSON.stringify(obhj));
+               }}>
+               <Link to="/checkout">Rent Me</Link>
+                    
                 </Button>
+               
                 </Flex>
         </div>
 ))

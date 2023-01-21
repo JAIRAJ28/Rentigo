@@ -18,10 +18,21 @@ import {
   } from '@chakra-ui/react';
   import { useState } from 'react';
   import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+  let data = {
+    First_name: "",
+    last_name:"",
+    Mobile_Number: "",
+    Email_address: "",
+    Password: "",
+    Address_1:"",
+    Address_2:"",
+    Zip_Postal_Code:"",
+    AWD_Number:"",
+  };
 
   export default function Signup() {
     const [showPassword, setShowPassword] = useState(false);
-  
+   const[form,setFormdata]=useState(data)
     return (
       <>
     
@@ -51,12 +62,11 @@ import {
             p={8}>
             <Stack spacing={4}>
               <HStack>
-               
-               
+             
                 <Box>
                   <FormControl id="firstName" isRequired>
                     <FormLabel color={"#d3cefc"}>First Name</FormLabel>
-                    <Input type="text" />
+                    <Input type="text" value={form.First_name} onChange={(e)=>{setFormdata(e.target.value)}} />
                   </FormControl>
                 </Box>
 
@@ -66,7 +76,7 @@ import {
                 <Box>
                   <FormControl id="lastName">
                     <FormLabel color={"#d3cefc"}>Last Name</FormLabel>
-                    <Input type="text" />
+                    <Input type="text" value={form.last_name} onChange={(e)=>{setFormdata(e.target.value)}} />
                   </FormControl>
                 </Box>
 
@@ -76,13 +86,13 @@ import {
 
               <FormControl id="number" isRequired>
                 <FormLabel color={"#d3cefc"}>Mobile Number</FormLabel>
-                <Input type="number" />
+                <Input type="number" value={form.Mobile_Number} onChange={(e)=>{setFormdata(e.target.value)}}  />
               </FormControl>
 
 
               <FormControl id="email" isRequired>
                 <FormLabel color={"#d3cefc"}>Email address</FormLabel>
-                <Input color={"white"} type="email" />
+                <Input color={"white"} type="email" value={form.Email_address} onChange={(e)=>{setFormdata(e.target.value)}} />
               </FormControl>
 
 
@@ -91,13 +101,17 @@ import {
               <FormControl id="password" isRequired>
                 <FormLabel color={"#d3cefc"}>Password</FormLabel>
                 <InputGroup>
-                  <Input type={showPassword ? 'text' : 'password'} />
+                  <Input type={showPassword ? 'text' : 'password'} value={form.Password} onChange={(e)=>{setFormdata(e.target.value)}} />
                   <InputRightElement h={'full'}>
                     <Button
                       variant={'ghost'}
-                      onClick={() =>
-                        setShowPassword((showPassword) => !showPassword)
-                      }>
+                      onClick={
+                        () => {
+                          setShowPassword((showPassword) => !showPassword);
+                          console.log(form);
+                        }
+                      }
+                      >
                       {showPassword ? <ViewIcon /> : <ViewOffIcon />}
                     </Button>
 
@@ -144,7 +158,13 @@ import {
                   color={'white'}
                   _hover={{
                     bg: 'blue.700',
-                  }}>
+                  }}
+                  
+                  onClick={()=>(
+                    localStorage.setItem("Registered",JSON.stringify(form))
+                  )}
+                  
+                  >
                   Sign up
                 </Button>
               </Stack>
