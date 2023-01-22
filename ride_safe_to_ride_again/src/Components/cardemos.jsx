@@ -54,7 +54,7 @@ export const Cardemos=()=>{
         
     const fecthData=(page)=>{
        dispatch({type:"Loading"})
-        axios.get(`https://636d2336ab4814f2b279de8f.mockapi.io/car?limit=10&page=${page}`)
+        axios.get(`https://636d2336ab4814f2b279de8f.mockapi.io/meals?limit=10&page=${page}`)
         .then((res)=>{
             setData(res.data)
             dispatch({type:"Sucess",payLoad:res.data})
