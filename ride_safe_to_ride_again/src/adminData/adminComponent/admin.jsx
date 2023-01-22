@@ -1,102 +1,53 @@
-import {Button,Center,Checkbox,color,FormControl,FormLabel,Input} from "@chakra-ui/react"
-import { useReducer, useState } from "react"
-import axios from "axios"
-const initialState = {
-  name: "",
-  ownerName: "",
-  address: "",
-  areaCode: "",
-  rent: "",
-  isBachelorAllowed: false,
-  isMarriedAllowed: false,
-}
-const reducer = (state, action) => {
-    switch (action.type) {
-  
-      case "name": {
-        return {
-          ...state, name: action.payload
-        }
-      }
-      case "password": {
-        return {
-          ...state, ownerName: action.payload
-        }
-      }
-     
-      case "reset": {
-        return initialState
-      }
-      default: {
-        return state
-      }
-    }
-  }
+
+import {  useState } from "react"
+import axios, { formToJSON } from "axios"
+import { useNavigate } from "react-router-dom"
+import "./admin.css"
+
+
 
 export const Admin=()=>{
-     
-    const [state, dispatch] = useReducer(reducer, initialState)
-
-  const { name, ownerName, address, areaCode, rent, isBachelorAllowed, isMarriedAllowed }=state
-  const handleSubmit = () => {
-    console.log(state)
+    const [form,setForm]=useState("");
+    const [pass,setpass]=useState("");
 
 
-    axios.post(`http://localhost:${process.env.REACT_APP_JSON_SERVER_PORT}/houses`, {
-      name: name,
-      ownerName: ownerName,
-      address: address,
-      areaCode: areaCode,
-      rent: rent,
-      isBachelorAllowed: isBachelorAllowed,
-      isMarriedAllowed: isMarriedAllowed
-
-    })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-
-
-
-
+   const handelSubmit=(e)=>{
+    e.preventDefault()
+    if(form==="" ||pass===""){
+      alert("Please fill all credentials")
+    }
+    else if(form==="admin@gmail.com"||pass===12345){
+        alert("SIGNED In SUCCESSFULLY");
+        window.location.href="/admin/dasboard"
+   }
   }
-  return (
-      <div className = "addHouseContainer" 
-      style={{
-        width:"30%",
-        padding:"40px",
-        textAlign:"center",
-        margin:"auto",
-        marginTop:"50px",
-        borderRadius:"20px",
-        backgroundColor:"rgb(89,0,179)",
-        color:"black"
-      }}
-      >
-      <h1>Admin</h1>
+  return(
+    <div className="hey">
+   <div className="wrapper">
+    <header>Login Form</header>
+    <form  onSubmit={handelSubmit}>
+      <div className="field email">
+        <div className="input-area">
+          <input type="text" placeholder="Email Address" value={form} onChange={(e)=>setForm(e.target.value)} required />
         
-
-      <form className="form"  >
-          <FormControl>
-          <Input mt={"20px"} bg={"white"} className="name" placeholder="Name" onChange={(e) => dispatch({ type: "name", payload: e.target.value })} />
-          <Input mt={"20px"} bg={"white"} className="ownerName" placeholder="Admin name"
-            onChange={(e) => dispatch({ type: "ownerName", payload: e.target.value })}
-
-
-          />
-          <Input mt={"20px"} bg={"white"} className="address" placeholder="password" 
-            onChange={(e) => dispatch({ type: "address", payload: e.target.value })}
-
-            />
-         
-     
-              <br />
-          <Button mt={"20px"} bg={"red"} className="submitBtn" onClick={handleSubmit}     > Submit</Button>
-          </FormControl>
-        </form>
+        </div>
+        <div className="error error-txt">Email can't be blank</div>
       </div>
+      <div className="field password">
+        <div className="input-area">
+          <input type="password" placeholder="Password"  value={pass} onChange={(e)=>setpass(e.target.value)} required  />
+        
+        </div>
+        <div className="error error-txt">Password can't be blank</div>
+      </div>
+      <div className="pass-txt">Forgot password?</div>
+      <input type="submit" value="Login" />
+    </form>
+    <div className="sign-txt">Not yet member? Signup now</div>
+  </div>
+
+      
+    
+    </div>
   )
 }
