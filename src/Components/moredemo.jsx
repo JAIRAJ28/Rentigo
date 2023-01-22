@@ -7,9 +7,9 @@ import { Flex,Image,Text,VStack } from "@chakra-ui/react";
 export const Demo=()=>{
   let [data,setData]=useState([]);
 let index=useParams();
-
+console.log(index)
 const fetfinal=()=>{
-    axios.get(`https://636d2336ab4814f2b279de8f.mockapi.io/car?limit=1&${index.userid}`)
+    axios.get(`https://636d2336ab4814f2b279de8f.mockapi.io/meals?id=${index.userid}`)
     .then(res=>{setData(res.data)
     console.log(res.data)
     })
