@@ -37,7 +37,7 @@ console.log(data)
 
 const HandelChange=(id)=>{
     axios.delete(`https://636d2336ab4814f2b279de8f.mockapi.io/meals/${id}`)
-    window.location.reload()
+
     console.log(id)
 }
 
@@ -67,7 +67,7 @@ width={"30%"}
     Rented
     </Text>
     </Link>
-  <Link to="/admin/dasboard/rented">
+  <Link to="/admin/dasboard/form">
   <Text
     fontSize={"30px"}
     fontWeight={"bold"}
@@ -107,13 +107,7 @@ width={"30%"}
     
 
     </Tbody>
-    {/* <Tfoot>
-      {/* <Tr>
-        <Th>To convert</Th>
-        <Th>into</Th>
-        <Th isNumeric>multiply by</Th>
-      </Tr> */}
-    {/* </Tfoot> */} 
+ 
   </Table>
 </TableContainer>
 
